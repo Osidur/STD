@@ -30,7 +30,7 @@ A tower defence game with: menu, round system, moving enemies, static towers, pr
         Prefer hitpoints.
             When collision between projectile and Enemy; HP - 1.
         Prefer SFX.
-            Clonk on a sound file onto sum events.
+            Clonk on a sound file onto sum' events.
 
     Static towers (Towers)
         Need a point to sit on.
