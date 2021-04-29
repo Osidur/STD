@@ -86,13 +86,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="MyResources\Bababoey - kopia.ogg" />
+    <Resource Include="MyResources\Damedane - kopia.ogg" />
+    <Resource Include="MyResources\Fart - kopia.ogg" />
+    <Resource Include="MyResources\Gun - kopia.ogg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="MyResources\Sans - kopia.ogg" />
+    <Resource Include="MyResources\Woaa - kopia.ogg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyResources\Background2 - kopia.png" />
+    <Resource Include="MyResources\Hugo - kopia.png" />
+    <Resource Include="MyResources\Praxel - kopia.png" />
+    <Resource Include="MyResources\SimonSad - kopia.png" />
+    <Resource Include="MyResources\TomasHappy - kopia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyResources\niklas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
