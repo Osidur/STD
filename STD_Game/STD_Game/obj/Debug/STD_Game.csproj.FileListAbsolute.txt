@@ -28,3 +28,4 @@ C:\Users\hugop\OneDrive\Documents\GitHub\STD\STD_Game\STD_Game\obj\Debug\STD_Gam
 C:\Users\hugop\OneDrive\Documents\GitHub\STD\STD_Game\STD_Game\obj\Debug\STD_Game.csproj.CoreCompileInputs.cache
 C:\Users\hugop\OneDrive\Documents\GitHub\STD\STD_Game\STD_Game\obj\Debug\STD_Game.exe
 C:\Users\hugop\OneDrive\Documents\GitHub\STD\STD_Game\STD_Game\obj\Debug\STD_Game.pdb
+C:\Users\hugop\OneDrive\Documents\GitHub\STD\STD_Game\STD_Game\obj\Debug\STD_Game_Content.g.cs

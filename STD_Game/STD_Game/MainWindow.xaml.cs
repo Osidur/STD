@@ -63,7 +63,7 @@ namespace STD_Game
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
 
             /*the source for the background image*/
-            backgroundImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\Background2 - kopia.png"));
+            backgroundImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/Background2 - kopia.png"));
             /*sets the canvas background to our background image*/
             MyCanvas.Background = backgroundImage;
 
@@ -92,7 +92,7 @@ namespace STD_Game
                 balloonSkins += 1;
 
                 /*when balloonSkins is over five it is set to one again and the cycle continues*/
-                if (balloonSkins > 5)
+                if (balloonSkins > 13)
                 {
                     balloonSkins = 1;
                 }
@@ -102,19 +102,43 @@ namespace STD_Game
                 switch (balloonSkins)
                 {
                     case 1:
-                        balloonImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\Hugo - kopia.png"));
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/Hugo - kopia.png"));
                     break;
                     case 2:
-                        balloonImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\Praxel - kopia.png"));
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/Praxel - kopia.png"));
                     break;
                     case 3:
-                        balloonImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\SimonSad - kopia.png"));
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/SimonSad - kopia.png"));
                     break;
                     case 4:
-                        balloonImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\TomasHappy - kopia.png"));
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/TomasHappy - kopia.png"));
                     break;
                     case 5:
-                        balloonImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\hugo.pollack\\Documents\\GitHub\\STD\\STD_Game\\STD_Game\\MyResources\\TomasHappy - kopia.png"));
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/fabianCrop.jpg"));
+                    break;
+                    case 6:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/niklas.png"));
+                    break;
+                    case 7:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/ester.png"));
+                    break;
+                    case 8:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/gabbe.png"));
+                    break;
+                    case 9:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/jeffangry.png"));
+                    break;
+                    case 10:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/obama.png"));
+                    break;
+                    case 11:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/oskar.png"));
+                    break;
+                    case 12:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/viggoscary.png"));
+                    break;
+                    case 13:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/MyResources/stefan.png"));
                     break;
                 }
 
@@ -123,8 +147,8 @@ namespace STD_Game
                 Rectangle newBalloon = new Rectangle
                 {
                     Tag = "Balloon",
-                    Height = 500,
-                    Width = 500,
+                    Height = 80,
+                    Width = 80,
                     Fill = balloonImage
                 };
 
@@ -144,10 +168,10 @@ namespace STD_Game
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
                 /*runs if the rectangle that was found on MyCanvas has a "balloon" string as a tag*/
-                if ((string)x.Tag == "balloon")
+                if ((string)x.Tag == "Balloon")
                 {
                     /*sets i to a random value between -5 and 5*/
-                    i = rand.Next(-5, 5);
+                    i = rand.Next(-10, 10);
 
                     /*the position is changed so that the balloon's distance from the top of the 
                      *canvas is decreased by speed once every tick.
@@ -156,12 +180,41 @@ namespace STD_Game
                     /*changes the position of the balloon on the x axis*/
                     Canvas.SetLeft(x, Canvas.GetLeft(x) - (i * -1));
                 }
+
+                /*if x's, the rectangles on the canvas, distance from the top is -80, the size of the balloon, it is added into itemRemover
+                 *and it will be counted as a missed balloon*/
+                if (Canvas.GetTop(x) < -80)
+                {
+                    itemRemover.Add(x);
+
+                    missedBalloons += 1;
+                }
+            }
+
+            /*here all the content of itemRemover is removed*/
+            foreach (Rectangle y in itemRemover)
+            {
+                MyCanvas.Children.Remove(y);
+
             }
         }
 
         private void Pop(object sender, MouseButtonEventArgs e)
         {
+            if (gameIsActive)
+            {
+                if (e.OriginalSource is Rectangle)
+                {
+                    Rectangle activeRec = (Rectangle)e.OriginalSource;
 
+                    player.Open(new Uri("../../MyResources/Sans.mp3", UriKind.RelativeOrAbsolute));
+                    player.Play();
+
+                    MyCanvas.Children.Remove(activeRec);
+
+                    score += 1;
+                }
+            }
         }
 
         private void StartGame()

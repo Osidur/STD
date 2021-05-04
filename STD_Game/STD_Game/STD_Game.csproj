@@ -110,5 +110,19 @@
   <ItemGroup>
     <Resource Include="MyResources\niklas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyResources\fabianCrop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyResources\damedane.mp3" />
+    <Content Include="MyResources\Sans.mp3" />
+    <Resource Include="MyResources\stefan.png" />
+    <Resource Include="MyResources\ester.png" />
+    <Resource Include="MyResources\jeffangry.png" />
+    <Resource Include="MyResources\oskar.png" />
+    <Resource Include="MyResources\viggoscary.png" />
+    <Resource Include="MyResources\gabbe.png" />
+    <Resource Include="MyResources\obama.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
