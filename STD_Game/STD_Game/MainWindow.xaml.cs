@@ -199,19 +199,32 @@ namespace STD_Game
             }
         }
 
+        /// <summary>
+        /// if MouseButtonEventArgs e is a rectangle it makes activeRec with the value of the clicked rectangle.
+        /// MyCanvas.Children.Remove(activeRec) removes the clicked rectangle from the canvas.
+        /// 
+        /// A sound is also played.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Pop(object sender, MouseButtonEventArgs e)
         {
             if (gameIsActive)
             {
+                /*when you click a rectangle it is made into the activeRec*/
                 if (e.OriginalSource is Rectangle)
                 {
                     Rectangle activeRec = (Rectangle)e.OriginalSource;
 
+                    /*opens a media player with the Sans.mp3 sound loaded*/
                     player.Open(new Uri("../../MyResources/Sans.mp3", UriKind.RelativeOrAbsolute));
+                    /*activates the media player*/
                     player.Play();
 
+                    /*removes the activeRec, the rectangle clicked*/
                     MyCanvas.Children.Remove(activeRec);
 
+                    /*add 1 to score*/
                     score += 1;
                 }
             }
