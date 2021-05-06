@@ -1,6 +1,11 @@
 # STD
-# Plan
-# Scuffed Tower Defence
+# BALLOONA POPPA (NEW AND FRÄSCH PLANERING FÖR E GUIDE UPPGIFT)
+
+Jag ska kolla igenom hela guiden först för att kunna göra resten av planeringen mer effektivt. Sen ska jag ta redå på om jag har några andra problem.
+
+Jag kollade inte igenom hela guiden innan jag började koda vilket resulterade i att jag inte exakt förstod vad jag skrev. På grund av detta behövde jag gå igenom min kod senare och försöka tyda vad den gör.
+
+# Scuffed Tower Defence (OLD AND GAMMAL PLANERING FOR OLD AND GAMMAL GAME)
 
 A tower defence game with: menu, round system, moving enemies, static towers, projectiles, point system, player health system, money system, successionally harder.
 
@@ -73,3 +78,4 @@ A tower defence game with: menu, round system, moving enemies, static towers, pr
     Successionally harder (Difficulty)
         Need a way to make higher index rounds send out more Enemies.
             When round over; EnemyCount++.
+
