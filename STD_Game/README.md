@@ -1,9 +1,23 @@
 # STD
 # BALLOONA POPPA (NEW AND FRÄSCH PLANERING FÖR E GUIDE UPPGIFT)
 
+Planering
+
 Jag ska kolla igenom hela guiden först för att kunna göra resten av planeringen mer effektivt. Sen ska jag ta redå på om jag har några andra problem.
 
-Jag kollade inte igenom hela guiden innan jag började koda vilket resulterade i att jag inte exakt förstod vad jag skrev. På grund av detta behövde jag gå igenom min kod senare och försöka tyda vad den gör.
+Hur planeringen följdes
+
+Jag kollade inte igenom hela guiden innan jag började koda vilket resulterade i att jag inte exakt förstod vad jag skrev. På grund av detta behövde jag gå igenom min kod senare och försöka tyda vad den gör för att kunna kommentera. Själva planeringen var också otroligt outvecklad men eftersom jag följde en guide så spelade detta inte så stor roll.
+
+Problem
+
+Jag stötte på några problem när det kom till bilderna. Jag sökte hjälp hos Fabian och han sade att jag behövde ändra bildernas "Build Action" till resource i properties. Jag använde i början den totala sökvägen för bilderna vilket inte skulle fungera för andra datorer än den programmet skrevs på. Jag ändrade till en sökväg som skulle fungera för alla datorer. "pack://application:,,," sökvägen istället för "C://user/blabla..." Ett annat problem jag stötte på var att jag inte hade skrivit balloon's tag "Balloon" med litet b. På grund av detta kom det inte fram några ballonger men det var ett enkelt problem att fixa. 
+
+Extra funktionalitet
+
+Jag ändrade bilderna, bakgrund, ballonger och antal bilder. Det överväldigande temat är NTI Kronhus men det finns även Obama. Detta var inte helt planerat men jag hade det i bakhuvet att använda egna bilder. Det var väldigt enkelt att lägga till bilder; jag ändrade på en siffra i en for loop och lade till några cases i switchsatsen. 
+
+Det finns inget sätt att förlora spelet så jag vet inte om RestartGame funktionen används någon gång.
 
 # Scuffed Tower Defence (OLD AND GAMMAL PLANERING FOR OLD AND GAMMAL GAME)
 
