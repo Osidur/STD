@@ -19,6 +19,11 @@ Jag ändrade bilderna, bakgrund, ballonger och antal bilder. Det överväldigand
 
 Det finns inget sätt att förlora spelet så jag vet inte om RestartGame funktionen används någon gång.
 
+Utvärdering av arbetsgång
+
+Jag la tillräckligt med tid på uppgiften, jag visste att det inte skulle ta lång tid och det gjorde det inte. 
+Jag hade alla förkunskaper jag behövde för uppgiften.
+
 # Scuffed Tower Defence (OLD AND GAMMAL PLANERING FOR OLD AND GAMMAL GAME)
 
 A tower defence game with: menu, round system, moving enemies, static towers, projectiles, point system, player health system, money system, successionally harder.
